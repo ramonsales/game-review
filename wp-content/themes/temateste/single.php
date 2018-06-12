@@ -10,6 +10,15 @@
                     <img src="http://via.placeholder.com/250" alt="imagem da notícia">
                 </div>
                 <p><?php the_content(); ?></p>
+                <div class="game-score">
+                    <h4>Nota do jogo</h4>
+                    <span>
+                        <?php
+                            $notaJogo = get_post_meta( get_the_ID(), 'meta_game_score', true );
+                            echo $notaJogo;
+                        ?>
+                    </span>
+                </div>
             </div>
         </div>
     </div>

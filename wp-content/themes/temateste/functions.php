@@ -43,4 +43,36 @@
         ) );
     }
     add_action( 'widgets_init', 'arphabet_widgets_init' );
-    
+
+    //Game score MetaBOX
+
+    add_action( 'add_meta_boxes', 'scoreBox' );
+
+    function scoreBox() {
+        add_meta_box(
+            'game-score',
+            'Nota do Game',
+            'scoreBoxRender',
+            'post',
+            'side',
+            'high'
+        );
+    }
+
+    function scoreBoxRender( $post ) {
+        $value = get_post_meta( $post->ID, 'meta_game_score', true );
+        echo '<label for="game_score">Nota do jogo</label>';
+        echo '<input type="number" id="game_score" min="0" max="10" name="game_score" value="'.esc_attr($value).'" size="25" />';
+    }
+
+    add_action( 'save_post', 'saveGameScore' );
+
+    function saveGameScore( $post_id ) {
+        if ( 'post' == $_POST['post_type'] ) {
+            if ( ! current_user_can( 'edit_page', $post_id ) )
+                return;
+        }
+        $post_ID = $_POST['post_ID'];
+        $mydata = sanitize_text_field( $_POST['game_score'] );
+        update_post_meta($post_ID, 'meta_game_score', $mydata);
+    }
