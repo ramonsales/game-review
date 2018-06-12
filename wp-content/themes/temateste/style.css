@@ -95,31 +95,6 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
 }
 
-.sidebar {
-    margin-left: .4rem;
-}
-
-.sidebar-list {
-    list-style: none;
-}
-
-.sidebar-item {
-    margin-top: .5rem;
-}
-
-.sidebar-link:link,
-.sidebar-link:visited {
-    text-decoration: none;
-    color: #777;
-    transition: color .3s;
-    font-size: 1rem;
-}
-
-.sidebar-link:hover,
-.sidebar-link:active {
-    color: #222;
-}
-
 .content {
     min-height: 100%;
     position: relative;
@@ -149,4 +124,9 @@ footer {
 
 .widget ul li a {
     color: #343a40;
+}
+
+/* Rating Stars */
+.checked {
+    color: gold;
 }

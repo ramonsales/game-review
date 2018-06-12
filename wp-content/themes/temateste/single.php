@@ -10,12 +10,26 @@
                     <img src="http://via.placeholder.com/250" alt="imagem da notícia">
                 </div>
                 <p><?php the_content(); ?></p>
+                
+                <!-- Game Score -->
                 <div class="game-score">
-                    <h4>Nota do jogo</h4>
+                    <h5>Nota do jogo</h5>
                     <span>
                         <?php
                             $notaJogo = get_post_meta( get_the_ID(), 'meta_game_score', true );
-                            echo $notaJogo;
+                            for($i = 0; $i < $notaJogo; $i++) {
+                                echo '<i class="fa fa-star checked"></i>';
+                            }
+                            for($i = 0; $i < 5 - $notaJogo; $i++) {
+                                echo '<i class="fa fa-star"></i>';
+                            }
+                            echo "<p>";
+                            if($notaJogo == 0) {
+                                echo "Sem avaliação";
+                            } else {
+                                echo $notaJogo . " estrela" . ($notaJogo > 1 ? "s" : "");
+                            }
+                            echo "</p>";
                         ?>
                     </span>
                 </div>

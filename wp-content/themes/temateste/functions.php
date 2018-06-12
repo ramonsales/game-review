@@ -62,7 +62,7 @@
     function scoreBoxRender( $post ) {
         $value = get_post_meta( $post->ID, 'meta_game_score', true );
         echo '<label for="game_score">Nota do jogo</label>';
-        echo '<input type="number" id="game_score" min="0" max="10" name="game_score" value="'.esc_attr($value).'" size="25" />';
+        echo '<input type="number" id="game_score" min="0" max="5" name="game_score" value="'.esc_attr($value).'" size="25" />';
     }
 
     add_action( 'save_post', 'saveGameScore' );
