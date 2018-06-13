@@ -73,8 +73,8 @@
                         }
                         ?>
                         <div class="card-body">
-                            <h5 class="card-title"><?php the_title(); ?></h5>
-                            <p class="card-text"><?php the_content(); ?></p>
+                            <h5 class="card-title text-light"><?php the_title(); ?></h5>
+                            <span class="card-text card-content"><?php the_content(); ?></span>
                             <a href="<?php the_permalink(); ?>" class="card-link">Leia mais</a>
                         </div>
                     </div>

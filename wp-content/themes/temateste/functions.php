@@ -36,8 +36,8 @@
         register_sidebar( array(
             'name'          => 'Home left sidebar',
             'id'            => 'home_left_1',
-            'before_widget' => '<div class="widget">',
-            'after_widget'  => '</div>',
+            'before_widget' => '<nav class="widget navbar navbar-dark">',
+            'after_widget'  => '</nav>',
             'before_title'  => '<h2 class="rounded">',
             'after_title'   => '</h2>',
         ) );
