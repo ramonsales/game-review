@@ -1,8 +1,8 @@
                 </div>
             </main>
-            <div class="rodape row">
+            <div class="rodape row mb-2">
                 <footer class="text-center">
-                    <span>Todos os direitos reservados.</span>
+                    <span>&copy; Todos os direitos reservados.</span>
                 </footer>
             </div>
         </div>

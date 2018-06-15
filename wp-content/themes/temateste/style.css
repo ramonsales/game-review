@@ -22,6 +22,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 body {
     box-sizing: border-box !important;
     font-family: 'Lato', sans-serif;
+    color: #fff;
 }
 
 html, body {
@@ -100,6 +101,7 @@ html, body {
     margin: 0 1.5rem .75rem 0;
 }
 
+/* CARD */
 .card {
     height: 100%;
     background-color: transparent;
@@ -108,8 +110,16 @@ html, body {
 
 .card-content {
     color: #8c8c96;
+    font-weight: 700;
 }
 
+.review:link,
+.review:visited {
+    display: block;
+    text-decoration: none;
+}
+
+/* CAROUSEL */
 .dark {
     position: relative;
 }
@@ -151,7 +161,9 @@ footer {
     list-style-type: none;  
 }
 
-/* Rating Stars */
+/* POST */
+
+/* RATING STARS */
 .checked {
     color: gold;
 }

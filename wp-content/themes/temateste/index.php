@@ -7,7 +7,7 @@
         $args = array('category_name' => 'destaque');
         $destaques = new WP_Query($args); ?>
         <?php if ($destaques->have_posts()) : ?>
-            <div id="carouselDestaque" class="carouselHome carousel slide col-md-12" data-ride="carousel">
+            <div id="carouselDestaque" class="carouselHome carousel slide col-md-12 mb-3" data-ride="carousel">
                 <div class="dark carousel-inner">
                     <?php $i = 0; ?>
                     <?php while ($destaques->have_posts()) : $destaques->the_post(); ?>
@@ -63,21 +63,23 @@
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
                 <div class="col-md-4 mt-3">
-                    <div class="card">
-                        <?php
-                        if (has_post_thumbnail()) {
-                            the_post_thumbnail('custom-thumb', ['class' => 'card-img img-responsive responsive--full', 'title' => 'Feature image', 'alt' => 'imagem da notícia']);
-                        } else { ?>
-                            <img src="http://via.placeholder.com/250" alt="image da notícia" class="card-img">
-                            <?php
-                        }
-                        ?>
-                        <div class="card-body">
-                            <h5 class="card-title text-light"><?php the_title(); ?></h5>
-                            <span class="card-text card-content"><?php the_content(); ?></span>
-                            <a href="<?php the_permalink(); ?>" class="card-link">Leia mais</a>
+                    <a href="<?php the_permalink(); ?>" class="review">
+                        <div class="card">
+                                <?php
+                                if (has_post_thumbnail()) {
+                                    the_post_thumbnail('custom-thumb', ['class' => 'card-img img-responsive responsive--full', 'title' => 'Feature image', 'alt' => 'imagem da notícia']);
+                                } else { ?>
+                                    <img src="http://via.placeholder.com/250" alt="image da notícia" class="card-img">
+                                    <?php
+                                }
+                                ?>
+                                <div class="card-body">
+                                    <!-- <a href="#"><?php the_category(); ?></a> -->
+                                    <h5 class="card-title text-light"><?php the_title(); ?></h5>
+                                    <span class="card-text card-content"><?php the_content(); ?></span>
+                                </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             <?php endwhile; else: ?>
             <p><?php _e('Sorry, no posts matched your criteria.'); ?></p>

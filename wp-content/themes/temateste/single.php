@@ -7,7 +7,14 @@
             </div>
             <div class="col-md-12">
                 <div class="text-center mb-4">
-                    <img src="http://via.placeholder.com/250" alt="imagem da notícia">
+                    <?php
+                        if (has_post_thumbnail()) {
+                            the_post_thumbnail('banner', ['class' => 'card-img img-responsive responsive--full', 'title' => 'Feature image', 'alt' => 'imagem da notícia']);
+                        } else { ?>
+                            <img src="http://via.placeholder.com/250" alt="imagem do review" class="card-img">
+                            <?php
+                        }
+                    ?>
                 </div>
                 <p><?php the_content(); ?></p>
                 
