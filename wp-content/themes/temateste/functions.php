@@ -41,6 +41,33 @@
             'before_title'  => '<h2 class="rounded">',
             'after_title'   => '</h2>',
         ) );
+
+        register_sidebar( array(
+            'name'          => 'Footer sidebar 1',
+            'id'            => 'footer_sidebar_1',
+            'before_widget' => '<nav class="widget navbar navbar-dark">',
+            'after_widget'  => '</nav>',
+            'before_title'  => '<h2 class="rounded">',
+            'after_title'   => '</h2>',
+        ) );
+
+        register_sidebar( array(
+            'name'          => 'Footer sidebar 2',
+            'id'            => 'footer_sidebar_2',
+            'before_widget' => '<nav class="widget navbar navbar-dark">',
+            'after_widget'  => '</nav>',
+            'before_title'  => '<h2 class="rounded">',
+            'after_title'   => '</h2>',
+        ) );
+        
+        register_sidebar( array(
+            'name'          => 'Footer sidebar 3',
+            'id'            => 'footer_sidebar_3',
+            'before_widget' => '<nav class="widget navbar navbar-dark">',
+            'after_widget'  => '</nav>',
+            'before_title'  => '<h2 class="rounded">',
+            'after_title'   => '</h2>',
+        ) );
     }
     add_action( 'widgets_init', 'arphabet_widgets_init' );
 

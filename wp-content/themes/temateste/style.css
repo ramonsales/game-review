@@ -141,21 +141,7 @@ html, body {
 }
 
 /* FOOTER */
-.rodape {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 0 15px;
-    margin: 0 auto 0;
-}
 
-footer {
-    background-color: #141418;
-    border-radius: 3px;
-    width: 100%;
-    color: rgba(255,255,255,.5);
-}
 
 .widget ul {
     list-style-type: none;  
