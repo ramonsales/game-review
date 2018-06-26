@@ -167,3 +167,8 @@ html, body {
 .rodape .widget label {
     color:#8c8c96;
 }
+
+img {
+    max-width: 100%;
+    width: 100%;
+}
