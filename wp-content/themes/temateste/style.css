@@ -159,3 +159,11 @@ html, body {
 #menu-menu-sidebar li a:visited {
     color: #8c8c96;
 }
+/*CHANGING FOOTER DESIGN*/
+.rodape .widget-area a {
+    color:#8c8c96;
+    text-decoration: none;
+}
+.rodape .widget label {
+    color:#8c8c96;
+}
