@@ -172,3 +172,10 @@ img {
     max-width: 100%;
     width: 100%;
 }
+nav.widget.navbar.navbar-dark{
+    display: block;
+    
+}
+.line{
+   background-color: #8c8c96; 
+}
