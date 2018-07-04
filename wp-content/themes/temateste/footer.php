@@ -1,5 +1,6 @@
                 </div>
             </main>
+            <hr class="line">
             <div class="rodape row mb-2">
             <?php if ( is_active_sidebar( 'footer_sidebar_1' ) ) : ?>
                 <div id="primary-sidebar" class="col-md-4 primary-sidebar widget-area" role="complementary">
